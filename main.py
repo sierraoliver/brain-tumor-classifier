@@ -68,7 +68,7 @@ def load_model(model, path, device):
 def train(model, train_dl, optimizer, loss_fn):
     model.train()
     
-    for epoch in range(25):
+    for epoch in range(15):
         running_loss = 0.0 
 
         for x, y in train_dl:
@@ -87,6 +87,7 @@ def train(model, train_dl, optimizer, loss_fn):
 
     torch.save(model.state_dict(), MODEL_PATH)
     print(f"Model saved to {MODEL_PATH}")
+    
     return
 
 #evaluation
@@ -131,6 +132,8 @@ def show_test_sample(model, test_dl):
     print(f"Predicted class: {class_names[pred]}")
     print(f"Ground-truth: {class_names[label]}")
 
+    return
+
 #single image prediction
 def predict_image(img_path, model, transform, class_names):
     img = Image.open(img_path).convert("RGB")
@@ -150,6 +153,7 @@ def main():
     opt = optim.AdamW(model.parameters(), 1e-4)
     loss_fn = nn.CrossEntropyLoss()
 
+    #check for previously trained model, otherwise train new
     if os.path.exists(MODEL_PATH):
         choice = input("Saved model found. Load it? (y/n): ").lower()
         if choice == "y":
@@ -159,6 +163,7 @@ def main():
     else:
         train(model, train_dl, opt, loss_fn)
 
+    #allow user to skip evaluation and test sample
     run_eval = input("Run evaluation on test set? (y/n): ").lower()
     if run_eval == "y":
         evaluate(model, test_dl, loss_fn)
@@ -178,6 +183,7 @@ def main():
             print("File not found")
             continue
 
+        #run image prediction
         pred = predict_image(img_path, model, tf, class_names)
         print(f"Prediction: {pred}")
         
