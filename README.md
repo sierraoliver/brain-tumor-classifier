@@ -40,11 +40,12 @@ The application is designed as an end-to-end machine learning pipeline, handling
   - Robust input validation for file existence
 
 ------------------------------------------------------------------------------------
+## Dataset Structure
 
-<h2>Dataset Structure</h2>
+**Link for dataset used:**  
+https://data.mendeley.com/datasets/zwr4ntf94j/1
 
-Link for Dataset used: https://data.mendeley.com/datasets/zwr4ntf94j/1
-The dataset should follow the directory structure required by torchvision.datasets.ImageFolder:
+The dataset should follow the directory structure required by `torchvision.datasets.ImageFolder`:
 
 dataset/
 ├── Training/
