@@ -46,17 +46,17 @@ The application is designed as an end-to-end machine learning pipeline, handling
 Link for Dataset used: https://data.mendeley.com/datasets/zwr4ntf94j/1
 The dataset should follow the directory structure required by torchvision.datasets.ImageFolder:
 
-  dataset/
-  ├── Training/
-  │   ├── glioma/
-  │   ├── meningioma/
-  │   ├── notumor/
-  │   └── pituitary/
-  └── Testing/
-      ├── glioma/
-      ├── meningioma/
-      ├── notumor/
-      └── pituitary/
+dataset/
+├── Training/
+│ ├── glioma/
+│ ├── meningioma/
+│ ├── notumor/
+│ └── pituitary/
+└── Testing/
+├── glioma/
+├── meningioma/
+├── notumor/
+└── pituitary/
 
 Each class directory should contain corresponding MRI images.
 
