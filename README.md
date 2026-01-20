@@ -1,5 +1,5 @@
 # Brain Tumor Classifier
-<h2>Description</h2>
+## Description
 
 This project is a deep learning–based image classification system built with PyTorch to classify brain MRI images into four categories (glioma, meningioma, pituitary, no tumor) . It uses a custom convolutional neural network (CNN) trained on labeled medical imaging data and supports training, evaluation, visualization, and real-time inference on user-provided images.
 
@@ -7,7 +7,7 @@ The application is designed as an end-to-end machine learning pipeline, handling
 
 ------------------------------------------------------------------------------------
 
-<h2>Features</h2>
+## Features
 
 - Image Classification with CNN
   - Custom convolutional neural network implemented using PyTorch
@@ -47,6 +47,7 @@ https://data.mendeley.com/datasets/zwr4ntf94j/1
 
 The dataset should follow the directory structure required by `torchvision.datasets.ImageFolder`:
 
+```
 dataset/
 ├── Training/
 │ ├── glioma/
@@ -58,12 +59,13 @@ dataset/
 ├── meningioma/
 ├── notumor/
 └── pituitary/
+```
 
 Each class directory should contain corresponding MRI images.
 
 ------------------------------------------------------------------------------------
 
-<h2>Installation</h2>
+## Installation
 
 1) Clone the repository:
   - git clone https://github.com/yourusername/brain-tumor-classifier.git
@@ -74,7 +76,7 @@ Each class directory should contain corresponding MRI images.
 
 ------------------------------------------------------------------------------------
 
-<h2>Usage</h2>
+## Usage
 
 Run the main training and inference pipeline:
   - python main.py
