@@ -6,39 +6,20 @@ This project is a deep learning–based image classification system built with P
 The application is designed as an end-to-end machine learning pipeline, handling data loading, preprocessing, model training, evaluation, persistence, and interactive prediction from the command line.
 
 ------------------------------------------------------------------------------------
-
 ## Features
-
-- Image Classification with CNN
-  - Custom convolutional neural network implemented using PyTorch
-  - Classifies MRI images into four brain condition categories
-
-- Data Preprocessing & Augmentation
-  - Image resizing and normalization
-  - Random horizontal flipping and rotation for improved generalization
-  - Separate transforms for training and testing pipelines
-
-- Efficient Data Loading
-  - Uses torch.utils.data.DataLoader and ImageFolder for scalable dataset handling
-  - Supports GPU acceleration when available
-
-- Model Training & Persistence
-  - Trains using AdamW optimizer and cross-entropy loss
-  - Automatically saves trained model for reuse
-  - Allows loading a previously trained model to skip retraining
-
-- Evaluation & Metrics
-  - Computes test loss and classification accuracy
-  - Runs inference in evaluation mode with gradient tracking disabled
-
-- Visualization & Debugging
-  - Displays random test samples with predicted and ground-truth labels
-  - Useful for qualitative inspection of model performance
-
-- Interactive Inference
-  - Predicts classes for individual image files provided by the user
-  - Robust input validation for file existence
-
+- **Image Classification:** Custom CNN for 4-class brain MRI prediction
+- **Data Preprocessing:** Resizing, normalization, and augmentations (flip, rotation)
+- **Efficient Training:** GPU support, AdamW optimizer, model checkpointing
+- **Evaluation & Visualization:** Test accuracy, loss metrics, and sample predictions
+- **Interactive Inference:** Predict on custom MRI images with robust input validation
+  
+------------------------------------------------------------------------------------
+## 🛠️ Tech Stack
+- **Deep Learning:** PyTorch, CNN
+- **Data Handling:** Torchvision, PIL
+- **Visualization:** Matplotlib
+- **Deployment:** Command-line interface, interactive inference
+  
 ------------------------------------------------------------------------------------
 ## Dataset Structure
 
